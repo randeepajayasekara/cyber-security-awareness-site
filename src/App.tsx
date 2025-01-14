@@ -158,7 +158,7 @@ function App() {
             </Popover>
 
             <Link to="/security-tips">
-              <span className="text-sm/6 font-normal text-gray-900 dark:text-gray-100">
+              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
                 Tips
               </span>
             </Link>
