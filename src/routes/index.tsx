@@ -1,11 +1,16 @@
 import { SparklesCore } from "@/components/animations/sparkles";
 import { Cover } from "@/components/animations/cover";
 import { WorldMap } from "@/components/animations/world-map";
+import { MacbookScroll } from "@/components/animations/macbook-scroll";
+import { FlipWords } from "@/components/animations/flip-words";
 
 export default function Home() {
+
+  const flipSentenceQueries = ["There are around 2,244 cyber attacks per day.", "Which is about one attack every 39 seconds.", "Global cyber attacks increased by 30% in Q2 2024.", "Reaching 1,636 weekly attacks per organization."];
+
   return (
     <div className="bg-white dark:bg-black h-screen">
-      <div className="h-[40rem] w-full bg-gray-200 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="h-[40rem] w-full bg-gray-200 dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-gray-400 relative">
           Navigate the Digital World <Cover>Confidently</Cover>
         </h1>
@@ -27,9 +32,23 @@ export default function Home() {
           />
 
           {/* Radial Gradient to prevent sharp edges */}
-          <div className="absolute inset-0 w-full h-full bg-gray-200 dark:bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+          <div className="absolute inset-0 w-full h-full bg-gray-200 dark:bg-[#0B0B0F] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
+
+      <div className="overflow-hidden dark:bg-[#0B0B0F] bg-gray-200 w-full">
+      <MacbookScroll
+        title={
+          <span>
+            Do you know? <br /> <FlipWords words={flipSentenceQueries} className="font-bold text-center"/>
+          </span>
+        }
+
+        src={`https://i.ibb.co/4YtK0L1/Industry-X-Group-Photo.jpg`}
+        showGradient={false}
+      />
+    </div>
+
       {/*<div className="w-full bg-gray-200 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <WorldMap
           dots={[
