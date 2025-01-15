@@ -8,9 +8,6 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
-import { useLocation } from "react-router-dom";
-
-
 
 import { useState } from "react";
 import {
@@ -19,10 +16,6 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
 } from "@headlessui/react";
 import {
   MegaphoneIcon,
@@ -72,7 +65,7 @@ const callsToAction = [
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+
 
   return (
     <>
@@ -101,88 +94,32 @@ function App() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-            <Popover className="relative">
-              
-                <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
-                  <Link to="/">Home</Link>
-                  {location.pathname === "/" && (
-                  <ChevronDownIcon
-                    aria-hidden="true"
-                    className="size-5 flex-none text-gray-400"
-                  />)}
-                </PopoverButton>
-              
-
-              <PopoverPanel
-                transition
-                className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-zinc-950 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-              >
-                <div className="p-4">
-                  {products.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 dark:hover:bg-gray-800/50"
-                    >
-                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          aria-hidden="true"
-                          className="size-6 text-gray-600 group-hover:text-indigo-600"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-semibold text-gray-900 dark:text-white"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-600 dark:text-gray-300">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-1 divide-x divide-gray-900/5 bg-gray-50 dark:bg-zinc-900">
-                  {callsToAction.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      target="_blank"
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/50 duration-200"
-                    >
-                      <item.icon
-                        aria-hidden="true"
-                        className="size-5 flex-none text-gray-400"
-                      />
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </PopoverPanel>
-            </Popover>
-
-            <Link to="/security-tips">
-              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
-                Tips
-              </span>
-            </Link>
-            <Link to="/awareness-local">
-              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
-                Aware
-              </span>
-            </Link>
-            <Link to="/resource-tools">
-              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
-                Resources
-              </span>
-            </Link>
-          </PopoverGroup>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <ModeToggle />
-          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            
+              <Link to="/">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                  Home
+                </span>
+              </Link>
+              <Link to="/security-tips">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                  Tips
+                </span>
+              </Link>
+              <Link to="/awareness-local">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                  Aware
+                </span>
+              </Link>
+              <Link to="/resource-tools">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                  Resources
+                </span>
+              </Link>
+            </div>
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+              <ModeToggle />
+            </div>
         </nav>
         <Dialog
           open={mobileMenuOpen}
@@ -212,27 +149,13 @@ function App() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  <Disclosure as="div" className="-mx-3">
-                    <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                      <Link to="/">Home</Link>
-                      <ChevronDownIcon
-                        aria-hidden="true"
-                        className="size-5 flex-none group-data-open:rotate-180"
-                      />
-                    </DisclosureButton>
-                    <DisclosurePanel className="mt-2 space-y-2">
-                      {[...products, ...callsToAction].map((item) => (
-                        <DisclosureButton
-                          key={item.name}
-                          as="a"
-                          href={item.href}
-                          className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50"
-                        >
-                          {item.name}
-                        </DisclosureButton>
-                      ))}
-                    </DisclosurePanel>
-                  </Disclosure>
+
+                <Link
+                    to="/"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/50"
+                  >
+                    Home
+                  </Link>
                   <Link
                     to="/security-tips"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/50"
