@@ -8,6 +8,9 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
+import { useLocation } from "react-router-dom";
+
+
 
 import { useState } from "react";
 import {
@@ -41,26 +44,26 @@ const products = [
   {
     name: "Experience",
     description: "Navigate the Digital World Confidently.",
-    href: "#intro",
+    href: "/#intro",
     icon: RocketLaunchIcon,
   },
   {
     name: "Problem Statement",
     description: "Explore growing cybersecurity threats faced by Sri Lankans.",
-    href: "#problem-statement",
+    href: "/#problem-statement",
     icon: GlobeAsiaAustraliaIcon,
   },
   {
     name: "Overview",
     description:
       "Quick summary of what users can expect to find on the website",
-    href: "#overview",
+    href: "/#overview",
     icon: WindowIcon,
   },
   {
     name: "Call to Action",
     description: "Explore and Access Resources",
-    href: "#cta-grid",
+    href: "/#cta-grid",
     icon: MegaphoneIcon,
   },
 ];
@@ -71,6 +74,7 @@ const callsToAction = [
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -101,13 +105,16 @@ function App() {
           </div>
           <PopoverGroup className="hidden lg:flex lg:gap-x-12">
             <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
-                <Link to="/">Home</Link>
-                <ChevronDownIcon
-                  aria-hidden="true"
-                  className="size-5 flex-none text-gray-400"
-                />
-              </PopoverButton>
+              
+                <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                  <Link to="/">Home</Link>
+                  {location.pathname === "/" && (
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="size-5 flex-none text-gray-400"
+                  />)}
+                </PopoverButton>
+              
 
               <PopoverPanel
                 transition
