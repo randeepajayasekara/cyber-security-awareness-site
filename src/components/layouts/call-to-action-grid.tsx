@@ -6,7 +6,7 @@ import {
   IconUserQuestion,
 } from "@tabler/icons-react";
 
-import Bn3 from '@/assets/banner_asset_3.png';
+import Bn3 from '@/assets/CTA_Banners/banner_asset_3.png';
 
 export function CallToActionGrid() {
   return (
