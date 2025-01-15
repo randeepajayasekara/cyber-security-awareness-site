@@ -13,55 +13,15 @@ import { useState } from "react";
 import {
   Dialog,
   DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
 } from "@headlessui/react";
 import {
-  MegaphoneIcon,
   Bars3Icon,
-  RocketLaunchIcon,
-  GlobeAsiaAustraliaIcon,
-  WindowIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/20/solid";
+
 
 import { ModeToggle } from "./components/theme/mode-toggle";
 
-const products = [
-  {
-    name: "Experience",
-    description: "Navigate the Digital World Confidently.",
-    href: "/#intro",
-    icon: RocketLaunchIcon,
-  },
-  {
-    name: "Problem Statement",
-    description: "Explore growing cybersecurity threats faced by Sri Lankans.",
-    href: "/#problem-statement",
-    icon: GlobeAsiaAustraliaIcon,
-  },
-  {
-    name: "Overview",
-    description:
-      "Quick summary of what users can expect to find on the website",
-    href: "/#overview",
-    icon: WindowIcon,
-  },
-  {
-    name: "Call to Action",
-    description: "Explore and Access Resources",
-    href: "/#cta-grid",
-    icon: MegaphoneIcon,
-  },
-];
-const callsToAction = [
-  { name: "Any Suggestions?", href: "mailto:info.inforccs@gmail.com)", icon: EnvelopeIcon },
-];
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
