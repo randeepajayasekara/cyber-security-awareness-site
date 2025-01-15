@@ -9,10 +9,12 @@ import SecurityTipsPage from '@/routes/security-tips.tsx'
 import AwarenessLocalPage from '@/routes/awareness-local.tsx'
 import NotFound from '@/routes/error/NotFound.tsx'
 import { ThemeProvider } from "@/components/theme/theme-provider.tsx"
+import { Analytics } from "@vercel/analytics/react"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <Analytics />
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Routes>
           <Route path="/" element={<App />}>
