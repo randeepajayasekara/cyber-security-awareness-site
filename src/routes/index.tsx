@@ -1,8 +1,9 @@
 import { SparklesCore } from "@/components/animations/sparkles";
 import { Cover } from "@/components/animations/cover";
-import { WorldMap } from "@/components/animations/world-map";
+{/*import { WorldMap } from "@/components/animations/world-map";*/}
 import { MacbookScroll } from "@/components/animations/macbook-scroll";
 import { FlipWords } from "@/components/animations/flip-words";
+import { FeaturesSectionDemo } from "@/components/layouts/feature-section";
 
 export default function Home() {
 
@@ -10,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="bg-white dark:bg-black h-screen">
-      <div className="h-[40rem] w-full bg-gray-200 dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="h-[40rem] w-full bg-white dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-gray-400 relative">
           Navigate the Digital World <Cover>Confidently</Cover>
         </h1>
@@ -32,11 +33,11 @@ export default function Home() {
           />
 
           {/* Radial Gradient to prevent sharp edges */}
-          <div className="absolute inset-0 w-full h-full bg-gray-200 dark:bg-[#0B0B0F] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+          <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#0B0B0F] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
 
-      <div className="overflow-hidden dark:bg-[#0B0B0F] bg-gray-200 w-full">
+      <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
       <MacbookScroll
         title={
           <span>
@@ -48,6 +49,8 @@ export default function Home() {
         showGradient={false}
       />
     </div>
+
+    <FeaturesSectionDemo />
 
       {/*<div className="w-full bg-gray-200 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <WorldMap

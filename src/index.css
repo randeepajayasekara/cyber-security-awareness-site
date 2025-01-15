@@ -14,3 +14,11 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+html {
+  background-color: white;
+}
+
+html.dark {
+  background-color: #0B0B0F;
+}
