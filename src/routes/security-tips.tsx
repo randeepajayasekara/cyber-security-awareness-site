@@ -1,10 +1,24 @@
-import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/animations/aurora-background";
 import { CSecurityPractisesGrid } from "@/components/layouts/cybersecurity-practises-grid";
 import { HeroHighlight } from "@/components/animations/hero-highlight";
 import { SiteFooter } from "@/components/layouts/site-footer";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { GoogleGeminiEffect } from "@/components/animations/gemini-effect";
+import React from "react";
 
 export default function SecurityTipsPage() {
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
   return (
     <div>
       <AuroraBackground>
@@ -49,6 +63,21 @@ export default function SecurityTipsPage() {
         </HeroHighlight>
         <CSecurityPractisesGrid />
       </div>
+
+      <div
+      className="h-[400vh] bg-white dark:bg-[#0B0B0F] w-full rounded-md relative pt-40 overflow-clip"
+      ref={ref}
+    >
+      <GoogleGeminiEffect
+        pathLengths={[
+          pathLengthFirst,
+          pathLengthSecond,
+          pathLengthThird,
+          pathLengthFourth,
+          pathLengthFifth,
+        ]}
+      />
+    </div>
 
       <div>
         <SiteFooter />
