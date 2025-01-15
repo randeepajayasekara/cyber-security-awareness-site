@@ -41,26 +41,26 @@ const products = [
   {
     name: "Experience",
     description: "Navigate the Digital World Confidently.",
-    href: "#",
+    href: "#intro",
     icon: RocketLaunchIcon,
   },
   {
     name: "Problem Statement",
     description: "Explore growing cybersecurity threats faced by Sri Lankans.",
-    href: "#",
+    href: "#problem-statement",
     icon: GlobeAsiaAustraliaIcon,
   },
   {
     name: "Overview",
     description:
       "Quick summary of what users can expect to find on the website",
-    href: "#",
+    href: "#overview",
     icon: WindowIcon,
   },
   {
     name: "Call to Action",
     description: "Explore and Access Resources",
-    href: "#",
+    href: "#cta-grid",
     icon: MegaphoneIcon,
   },
 ];
@@ -126,13 +126,13 @@ function App() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <Link
-                          to={item.href}
+                        <a
+                          href={item.href}
                           className="block font-semibold text-gray-900 dark:text-white"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
-                        </Link>
+                        </a>
                         <p className="mt-1 text-gray-600 dark:text-gray-300">
                           {item.description}
                         </p>

@@ -1,9 +1,9 @@
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
+  IconBulbFilled,
+  IconInputSpark,
+  IconTools,
+  IconUserQuestion,
 } from "@tabler/icons-react";
 
 export function CallToActionGrid() {
@@ -40,32 +40,32 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "Cybersecurity Tips",
+    description: " ",
     header: <Skeleton />,
     className: "md:col-span-2",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBulbFilled className="h-8 w-8 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Introduction",
+    description: " ",
     header: <Skeleton />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconInputSpark className="h-8 w-8 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Resources & Tools",
+    description: "Link to reliable online tools for password management, antivirus software, and privacy settings and etc..",
     header: <Skeleton />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconTools className="h-6 w-6 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Local Threats & Awareness",
     description:
       "Highlighting common cyber threats faced by Sri Lankans, such as phishing scams targeting local banks or online services.",
     header: <Skeleton />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconUserQuestion className="h-6 w-6 text-neutral-500" />,
   },
 ];

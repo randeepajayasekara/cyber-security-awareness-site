@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+      <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full" id="intro">
       <MacbookScroll
         title={
           <span>
@@ -53,9 +53,13 @@ export default function Home() {
       />
     </div>
 
-    <FeaturesSection />
+    <div id="problem-statement">
+      <FeaturesSection />
+    </div>
 
-    <OverviewSection />
+    <div id="overview">
+      <OverviewSection />
+    </div>
 
     <div className="w-full bg-white dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
         <WorldMap
@@ -84,7 +88,9 @@ export default function Home() {
         />
     </div> 
 
+    <div id="cta-grid">
     <CallToActionGrid />
+    </div>
 
     <SiteFooter />
 
