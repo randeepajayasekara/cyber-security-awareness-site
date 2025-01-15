@@ -7,6 +7,7 @@ import {
 } from "@tabler/icons-react";
 
 import Bn3 from '@/assets/CTA_Banners/banner_asset_3.png';
+import Bn4 from '@/assets/CTA_Banners/banner_asset_4.png';
 
 export function CallToActionGrid() {
   return (
@@ -42,8 +43,13 @@ const Skeleton = () => (
 );
 
 const Banner3 = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn3}/></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn3} className="w-full h-full object-cover"/></div>
 );
+
+const Banner4 = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn4} className="w-full h-full object-cover"/></div>
+);
+
 
 const items = [
   {
@@ -71,7 +77,7 @@ const items = [
     title: "Local Threats & Awareness",
     description:
       "Highlighting common cyber threats faced by Sri Lankans, such as phishing scams targeting local banks or online services.",
-    header: <Skeleton />,
+    header: <Banner4 />,
     className: "md:col-span-2",
     icon: <IconUserQuestion className="h-6 w-6 text-neutral-500" />,
   },
