@@ -25,7 +25,7 @@ export default function Home() {
         }}
       >
         <div className="h-[40rem] w-full bg-white dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-gray-400 relative">
+          <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-gray-600 dark:text-gray-400 relative">
             Navigate the Digital World <Cover>Confidently</Cover>
           </h1>
           <div className="w-[40rem] h-40 relative">
