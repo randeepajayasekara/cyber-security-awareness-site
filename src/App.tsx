@@ -34,7 +34,6 @@ import {
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
-  UserGroupIcon,
   EnvelopeIcon,
 } from "@heroicons/react/20/solid";
 
