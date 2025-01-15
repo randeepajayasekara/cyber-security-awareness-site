@@ -167,9 +167,9 @@ export const Lid = ({
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
         <img
           src={src as string}
-          alt="aceternity logo"
+          alt="macbook_logo"
           
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
+          className="object-cover object-left-top absolute rounded-none inset-0 h-full w-full"
         />
       </motion.div>
     </div>

@@ -87,8 +87,8 @@ function App() {
               <span className="sr-only">Crypticus Vigilance Lanka</span>
               <img
                 alt=""
-                src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/512/shield-ok-icon.png"
-                className="h-8 w-auto"
+                src="https://i.postimg.cc/VdX7Phh8/logo.png"
+                className="h-10 w-auto"
               />
             </Link>
           </div>
@@ -197,8 +197,8 @@ function App() {
                 <span className="sr-only">Crypticus Vigilance Lanka</span>
                 <img
                   alt=""
-                  src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/512/shield-ok-icon.png"
-                  className="h-8 w-auto z-50"
+                  src="https://i.postimg.cc/VdX7Phh8/logo.png"
+                  className="h-10 w-auto z-50"
                 />
               </Link>
               <button

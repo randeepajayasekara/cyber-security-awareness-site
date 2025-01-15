@@ -8,6 +8,7 @@ import {
 
 import Bn3 from '@/assets/CTA_Banners/banner_asset_3.png';
 import Bn4 from '@/assets/CTA_Banners/banner_asset_4.png';
+import Bn2 from '@/assets/CTA_Banners/banner_asset_2.png';
 
 export function CallToActionGrid() {
   return (
@@ -42,6 +43,10 @@ const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
 
+const Banner2 = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn2} className="w-full h-full object-cover rounded-xl"/></div>
+);
+
 const Banner3 = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn3} className="w-full h-full object-cover rounded-xl"/></div>
 );
@@ -62,7 +67,7 @@ const items = [
   {
     title: "Introduction",
     description: " ",
-    header: <Skeleton />,
+    header: <Banner2 />,
     className: "md:col-span-1",
     icon: <IconInputSpark className="h-8 w-8 text-neutral-500" />,
   },

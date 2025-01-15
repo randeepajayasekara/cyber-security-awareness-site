@@ -48,7 +48,7 @@ export default function Home() {
           </span>
         }
 
-        src={`https://i.ibb.co/4YtK0L1/Industry-X-Group-Photo.jpg`}
+        src={`https://techterms.com/img/xl/macos_243-3.jpg`}
         showGradient={false}
       />
     </div>
