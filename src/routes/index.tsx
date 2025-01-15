@@ -1,9 +1,12 @@
 import { SparklesCore } from "@/components/animations/sparkles";
 import { Cover } from "@/components/animations/cover";
-{/*import { WorldMap } from "@/components/animations/world-map";*/}
+import { WorldMap } from "@/components/animations/world-map";
 import { MacbookScroll } from "@/components/animations/macbook-scroll";
 import { FlipWords } from "@/components/animations/flip-words";
 import { FeaturesSection } from "@/components/layouts/feature-section";
+import { OverviewSection } from "@/components/layouts/overview-section";
+import { CallToActionGrid } from "@/components/layouts/call-to-action-grid";
+import { SiteFooter } from "@/components/layouts/site-footer";
 
 export default function Home() {
 
@@ -52,7 +55,9 @@ export default function Home() {
 
     <FeaturesSection />
 
-      {/*<div className="w-full bg-gray-200 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <OverviewSection />
+
+    <div className="w-full bg-white dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
         <WorldMap
           dots={[
             {
@@ -77,7 +82,13 @@ export default function Home() {
             },
           ]}
         />
-      </div> */}
+    </div> 
+
+    <CallToActionGrid />
+
+    <SiteFooter />
+
+      
     </div>
   );
 }

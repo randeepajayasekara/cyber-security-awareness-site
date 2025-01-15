@@ -1,13 +1,13 @@
 import { Outlet, Link } from "react-router-dom";
-import '@fontsource/poppins/100.css';
-import '@fontsource/poppins/200.css';
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/800.css';
-import '@fontsource/poppins/900.css';
+import "@fontsource/poppins/100.css";
+import "@fontsource/poppins/200.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
 
 import { useState } from "react";
 import {
@@ -52,7 +52,8 @@ const products = [
   },
   {
     name: "Overview",
-    description: "Quick summary of what users can expect to find on the website",
+    description:
+      "Quick summary of what users can expect to find on the website",
     href: "#",
     icon: WindowIcon,
   },
@@ -73,7 +74,7 @@ function App() {
 
   return (
     <>
-      <header className="bg-white/25 dark:bg-black/10 backdrop-blur-sm fixed inset-x-0 top-0 lg:z-20 text-black dark:text-white">
+      <header className="bg-white/25 dark:bg-black/10 backdrop-blur-sm fixed inset-x-0 top-0 z-20 text-black dark:text-white">
         <nav
           aria-label="Global"
           className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -101,9 +102,7 @@ function App() {
           <PopoverGroup className="hidden lg:flex lg:gap-x-12">
             <Popover className="relative">
               <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
-                <Link to="/">
-                  Home
-                </Link>
+                <Link to="/">Home</Link>
                 <ChevronDownIcon
                   aria-hidden="true"
                   className="size-5 flex-none text-gray-400"
@@ -134,7 +133,9 @@ function App() {
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
-                        <p className="mt-1 text-gray-600 dark:text-gray-300">{item.description}</p>
+                        <p className="mt-1 text-gray-600 dark:text-gray-300">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -207,9 +208,7 @@ function App() {
                 <div className="space-y-2 py-6">
                   <Disclosure as="div" className="-mx-3">
                     <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                      <Link to="/">
-                        Home
-                      </Link>
+                      <Link to="/">Home</Link>
                       <ChevronDownIcon
                         aria-hidden="true"
                         className="size-5 flex-none group-data-open:rotate-180"
@@ -248,9 +247,7 @@ function App() {
                   </Link>
                 </div>
                 <div className="py-6">
-                  <div
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 text-black dark:text-white"
-                  >
+                  <div className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 text-black dark:text-white">
                     <ModeToggle />
                   </div>
                 </div>
