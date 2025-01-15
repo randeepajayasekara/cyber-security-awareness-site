@@ -6,7 +6,22 @@ import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import { Link } from 'react-router-dom';
 
-export function FeaturesSectionDemo() {
+import { CalendarIcon } from "lucide-react"
+ 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
+
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+ 
+
+export function FeaturesSection() {
   const features = [
     {
       title: "Ransomware",
@@ -118,8 +133,8 @@ export const SkeletonOne = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
-      <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
+      <div className="absolute bottom-0  inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
+      <div className="absolute top-0  inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
     </div>
   );
 };
@@ -131,19 +146,43 @@ export const SkeletonThree = () => {
       target="__blank"
       className="relative flex gap-10  h-full group/image"
     >
-      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  relative">
-          {/* TODO */}
-          <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
-          <img
-            src="https://cdn.hirunews.lk/Data/News_Images/202412/1735644910_7819218_hirunews.jpg"
-            alt="header"
-            width={800}
-            height={800}
-            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
-          />
-        </div>
-      </div>
+      <HoverCard>
+        <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
+          <div className="flex flex-1 w-full h-full flex-col space-y-2  relative">
+            {/* TODO */}
+            <HoverCardTrigger>
+              <IconBrandYoutubeFilled className="h-20 w-20 absolute  inset-0 text-red-500 m-auto " />
+              <img
+                src="https://arkservices.ie/wp-content/uploads/2022/01/Cyber-Essentials.png"
+                alt="header"
+                width={800}
+                height={800}
+                className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+              />
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <div className="flex justify-between space-x-4">
+                <Avatar>
+                  <AvatarImage src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/youtube-icon.png" />
+                  <AvatarFallback>VC</AvatarFallback>
+                </Avatar>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-semibold">YouTube</h4>
+                  <p className="text-sm">
+                    Social Accounts of @SriLankaPoliceOfficial and @documents.gov.lk were breached by hackers
+                  </p>
+                  <div className="flex items-center pt-2">
+                    <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
+                    <span className="text-xs text-muted-foreground">
+                      Incident on 31st December, 2024
+                    </span>
+                  </div>
+                </div>
+              </div>
+      </HoverCardContent>
+          </div>
+          </div>
+      </HoverCard> 
     </Link>
   );
 };
@@ -186,7 +225,7 @@ export const SkeletonTwo = () => {
           >
             <img
               src={image}
-              alt="bali images"
+              alt="webgl_images"
               width="500"
               height="500"
               className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
@@ -208,7 +247,7 @@ export const SkeletonTwo = () => {
           >
             <img
               src={image}
-              alt="bali images"
+              alt="webgl_images"
               width="500"
               height="500"
               className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
@@ -217,8 +256,8 @@ export const SkeletonTwo = () => {
         ))}
       </div>
 
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+      <div className="absolute left-0  inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
+      <div className="absolute right-0 inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
     </div>
   );
 };
@@ -226,7 +265,12 @@ export const SkeletonTwo = () => {
 export const SkeletonFour = () => {
   return (
     <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-      <Globe className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72" />
+      
+      <img
+              src="https://cdn-icons-png.flaticon.com/512/10098/10098868.png"
+              alt="malware_symbol"
+              className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72"
+            />
     </div>
   );
 };

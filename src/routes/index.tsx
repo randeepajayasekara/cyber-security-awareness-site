@@ -3,7 +3,7 @@ import { Cover } from "@/components/animations/cover";
 {/*import { WorldMap } from "@/components/animations/world-map";*/}
 import { MacbookScroll } from "@/components/animations/macbook-scroll";
 import { FlipWords } from "@/components/animations/flip-words";
-import { FeaturesSectionDemo } from "@/components/layouts/feature-section";
+import { FeaturesSection } from "@/components/layouts/feature-section";
 
 export default function Home() {
 
@@ -50,7 +50,7 @@ export default function Home() {
       />
     </div>
 
-    <FeaturesSectionDemo />
+    <FeaturesSection />
 
       {/*<div className="w-full bg-gray-200 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <WorldMap
