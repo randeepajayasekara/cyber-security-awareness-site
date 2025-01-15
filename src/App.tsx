@@ -54,25 +54,24 @@ function App() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            
+          <div className="hidden lg:flex lg:gap-x-6 bg-gray-500/20 p-3 rounded-3xl border-2 border-gray-200/10">
               <Link to="/">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
                   Home
                 </span>
               </Link>
               <Link to="/security-tips">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
                   Tips
                 </span>
               </Link>
               <Link to="/awareness-local">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
                   Aware
                 </span>
               </Link>
               <Link to="/resource-tools">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">
+                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
                   Resources
                 </span>
               </Link>
