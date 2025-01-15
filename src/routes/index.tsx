@@ -7,6 +7,7 @@ import { FeaturesSection } from "@/components/layouts/feature-section";
 import { OverviewSection } from "@/components/layouts/overview-section";
 import { CallToActionGrid } from "@/components/layouts/call-to-action-grid";
 import { SiteFooter } from "@/components/layouts/site-footer";
+import { motion } from "framer-motion";
 
 export default function Home() {
 
@@ -14,31 +15,41 @@ export default function Home() {
 
   return (
     <div className="bg-white dark:bg-black h-screen">
-      <div className="h-[40rem] w-full bg-white dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
-        <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-gray-400 relative">
-          Navigate the Digital World <Cover>Confidently</Cover>
-        </h1>
-        <div className="w-[40rem] h-40 relative">
-          {/* Gradients */}
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.5,
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+      >
+        <div className="h-[40rem] w-full bg-white dark:bg-[#0B0B0F] flex flex-col items-center justify-center overflow-hidden rounded-md">
+          <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-gray-400 relative">
+            Navigate the Digital World <Cover>Confidently</Cover>
+          </h1>
+          <div className="w-[40rem] h-40 relative">
+            {/* Gradients */}
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+            <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+            <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
-          {/* Core component */}
-          <SparklesCore
-            background="transparent"
-            minSize={0.4}
-            maxSize={1}
-            particleDensity={1200}
-            className="w-full h-full"
-            particleColor="#FFFFFF"
-          />
+            {/* Core component */}
+            <SparklesCore
+              background="transparent"
+              minSize={0.4}
+              maxSize={1}
+              particleDensity={1200}
+              className="w-full h-full"
+              particleColor="#FFFFFF"
+            />
 
-          {/* Radial Gradient to prevent sharp edges */}
-          <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#0B0B0F] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+            {/* Radial Gradient to prevent sharp edges */}
+            <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#0B0B0F] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+          </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full" id="intro">
       <MacbookScroll
@@ -88,9 +99,19 @@ export default function Home() {
         />
     </div> 
 
-    <div id="cta-grid">
-    <CallToActionGrid />
-    </div>
+    <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.5,
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+      >
+      <div id="cta-grid">
+      <CallToActionGrid />
+      </div>
+    </motion.div>
 
     <SiteFooter />
 
