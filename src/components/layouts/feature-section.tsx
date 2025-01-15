@@ -164,7 +164,7 @@ export const SkeletonThree = () => {
               <div className="flex justify-between space-x-4">
                 <Avatar>
                   <AvatarImage src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/youtube-icon.png" />
-                  <AvatarFallback>VC</AvatarFallback>
+                  <AvatarFallback>YT</AvatarFallback>
                 </Avatar>
                 <div className="space-y-1">
                   <h4 className="text-sm font-semibold">YouTube</h4>

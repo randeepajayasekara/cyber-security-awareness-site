@@ -43,11 +43,11 @@ const Skeleton = () => (
 );
 
 const Banner3 = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn3} className="w-full h-full object-cover"/></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn3} className="w-full h-full object-cover rounded-xl"/></div>
 );
 
 const Banner4 = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn4} className="w-full h-full object-cover"/></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn4} className="w-full h-full object-cover rounded-xl"/></div>
 );
 
 

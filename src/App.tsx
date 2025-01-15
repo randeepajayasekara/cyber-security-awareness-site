@@ -68,8 +68,7 @@ const products = [
   },
 ];
 const callsToAction = [
-  { name: "Feedback", href: "#", icon: EnvelopeIcon },
-  { name: "About sUs", href: "#", icon: UserGroupIcon },
+  { name: "Any Suggestions?", href: "mailto:info.inforccs@gmail.com)", icon: EnvelopeIcon },
 ];
 
 function App() {
@@ -147,12 +146,13 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 dark:bg-zinc-900">
+                <div className="grid grid-cols-1 divide-x divide-gray-900/5 bg-gray-50 dark:bg-zinc-900">
                   {callsToAction.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 dark:text-gray-200 hover:bg-gray-100"
+                      target="_blank"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/50 duration-200"
                     >
                       <item.icon
                         aria-hidden="true"
