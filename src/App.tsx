@@ -10,22 +10,13 @@ import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
 
 import { useState } from "react";
-import {
-  Dialog,
-  DialogPanel,
-} from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { ModeToggle } from "./components/theme/mode-toggle";
 
-
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
 
   return (
     <>
@@ -55,30 +46,30 @@ function App() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-6 bg-gray-500/20 p-3 rounded-3xl border-2 border-gray-200/10">
-              <Link to="/">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
-                  Home
-                </span>
-              </Link>
-              <Link to="/security-tips">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
-                  Tips
-                </span>
-              </Link>
-              <Link to="/awareness-local">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
-                  Aware
-                </span>
-              </Link>
-              <Link to="/resource-tools">
-                <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
-                  Resources
-                </span>
-              </Link>
-            </div>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <ModeToggle />
-            </div>
+            <Link to="/">
+              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-600/10 dark:hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
+                Home
+              </span>
+            </Link>
+            <Link to="/security-tips">
+              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-600/10 dark:hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
+                Tips
+              </span>
+            </Link>
+            <Link to="/awareness-local">
+              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-600/10 dark:hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
+                Aware
+              </span>
+            </Link>
+            <Link to="/resource-tools">
+              <span className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-600/10 dark:hover:bg-gray-300/10 duration-200 p-2 px-3 rounded-3xl">
+                Resources
+              </span>
+            </Link>
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <ModeToggle />
+          </div>
         </nav>
         <Dialog
           open={mobileMenuOpen}
@@ -108,8 +99,7 @@ function App() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-
-                <Link
+                  <Link
                     to="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/50"
                   >
