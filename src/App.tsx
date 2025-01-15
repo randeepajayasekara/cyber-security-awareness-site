@@ -198,7 +198,7 @@ function App() {
                 <img
                   alt=""
                   src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/512/shield-ok-icon.png"
-                  className="h-8 w-auto"
+                  className="h-8 w-auto z-50"
                 />
               </Link>
               <button

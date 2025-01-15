@@ -6,6 +6,8 @@ import {
   IconUserQuestion,
 } from "@tabler/icons-react";
 
+import Bn3 from '@/assets/banner_asset_3.png';
+
 export function CallToActionGrid() {
   return (
     <div>
@@ -38,6 +40,11 @@ export function CallToActionGrid() {
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
+
+const Banner3 = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl select-none"><img src={Bn3}/></div>
+);
+
 const items = [
   {
     title: "Cybersecurity Tips",
@@ -56,7 +63,7 @@ const items = [
   {
     title: "Resources & Tools",
     description: "Link to reliable online tools for password management, antivirus software, and privacy settings and etc..",
-    header: <Skeleton />,
+    header: <Banner3 />,
     className: "md:col-span-1",
     icon: <IconTools className="h-6 w-6 text-neutral-500" />,
   },

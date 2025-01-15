@@ -120,7 +120,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 export const SkeletonOne = () => {
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+      <div className="w-full  p-5  mx-auto bg-white dark:bg-[#0B0B0F] shadow-2xl group h-full">
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <img
@@ -133,8 +133,8 @@ export const SkeletonOne = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0  inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
-      <div className="absolute top-0  inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
+      <div className="absolute bottom-0  inset-x-0 h-60 bg-gradient-to-t from-white dark:from-[#0B0B0F] via-white dark:via-[#0B0B0F] to-transparent w-full pointer-events-none" />
+      <div className="absolute top-0  inset-x-0 h-60 bg-gradient-to-b from-white dark:from-[#0B0B0F] via-transparent to-transparent w-full pointer-events-none" />
     </div>
   );
 };
@@ -256,8 +256,8 @@ export const SkeletonTwo = () => {
         ))}
       </div>
 
-      <div className="absolute left-0  inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+      <div className="absolute left-0  inset-y-0 w-20 bg-gradient-to-r from-white dark:from-[#0B0B0F] to-transparent  h-full pointer-events-none" />
+      <div className="absolute right-0 inset-y-0 w-20 bg-gradient-to-l from-white dark:from-[#0B0B0F]  to-transparent h-full pointer-events-none" />
     </div>
   );
 };
