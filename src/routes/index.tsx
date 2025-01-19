@@ -1,5 +1,6 @@
 import { SparklesCore } from "@/components/animations/sparkles";
 import { Cover } from "@/components/animations/cover";
+import { Spotlight } from "@/components/animations/spotlight";
 import { WorldMap } from "@/components/animations/world-map";
 import { MacbookScroll } from "@/components/animations/macbook-scroll";
 import { FlipWords } from "@/components/animations/flip-words";
@@ -15,6 +16,10 @@ export default function Home() {
 
   return (
     <div className="bg-white dark:bg-black h-screen">
+        <Spotlight
+          className="-top-40 left-0 md:left-0 md:-top-40"
+          fill="aqua"
+        />
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
